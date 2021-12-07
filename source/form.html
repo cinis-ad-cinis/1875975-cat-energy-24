@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
 
     <header class="header">
       <div class="header__container">
@@ -19,13 +20,13 @@
           </button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">Главная</a>
+              <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="form.html">Подбор программы</a>
+              <a class="nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -62,21 +63,21 @@
               <legend class="form__title visually-hidden">Выбор программы питания для кота</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-radio">
                     <input class="visually-hidden form__input-radio" type="radio" name="program" value="lose-weight" checked>
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Похудение</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-radio">
                     <input class="visually-hidden form__input-radio" type="radio" name="program" value="gain-weight">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Набор массы</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-radio">
                     <input class="visually-hidden form__input-radio" type="radio" name="program" value="help">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
@@ -108,28 +109,28 @@
               <legend class="form__title visually-hidden">Дополнительно</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Cахарозаменитель</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="water">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="milk">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Молоко</span>
                   </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label">
+                  <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="vitamins">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Витамины</span>
@@ -143,6 +144,19 @@
 
           </form>
 
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контактная информация и местоположение.</h2>
+        <div class="contacts__container">
+          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
+        <div class="contacts__map map">
+          <div class="map__responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258683!2d30.320853351452854!3d59.93871648178728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638130704841!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
       </section>
 

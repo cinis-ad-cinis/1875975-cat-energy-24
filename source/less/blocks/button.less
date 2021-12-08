@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: @white;
+  background-color: @basic-green;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background-color: @basic-green-hover;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+  }
+}
+
+.button--secondary {
+  color: @grey;
+  background-color: @basic-grey;
+
+  &:hover {
+    background-color: @basic-grey-hover;
+  }
+
+  &:active {
+    color: rgba(@grey, 0.3);
+  }
+}

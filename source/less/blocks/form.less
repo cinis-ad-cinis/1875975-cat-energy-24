@@ -36,10 +36,13 @@
   color: @black;
 }
 
-.form__input::placeholder,
-.form__textarea::placeholder {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+.form__input,
+.form__textarea {
+  &::placeholder {
+    font-family: @oswald;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @grey;
+  }
 }

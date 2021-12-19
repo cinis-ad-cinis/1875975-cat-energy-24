@@ -2,10 +2,29 @@
   background-color: @white;
 }
 
+.nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .nav__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-width: 440px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 478px;
+  }
 }
 
 .nav__link {
@@ -23,5 +42,23 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      color: @white;
+    }
   }
 }

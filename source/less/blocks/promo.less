@@ -41,6 +41,7 @@
       height: 700px;
       background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)), url("../img/index-background-desktop.jpg") no-repeat;
       background-size: cover;
+      z-index: 0;
     }
   }
 }
@@ -51,10 +52,13 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 972px;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 635px;
     padding: 0 110px;
   }
 }
@@ -78,7 +82,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 111px;
+    margin-top: 82px;
     margin-left: 80px;
   }
 }
@@ -108,18 +112,31 @@
   margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    min-width: 709px;
+    min-height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    left: calc(50% + 162px);
+    min-width: 552px;
+    min-height: 499px;
   }
 }
 
-.promo__link {
-  min-width: 280px;
+.promo__link-button {
+  width: 100%;
 
   @media (min-width: @tablet-width) {
-    margin-left: 91px;
+    z-index: 1;
     width: 244px;
-    font-size: 20px;
-    line-height: 20px;
+    min-height: 54px;
+    margin-left: 91px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,5 +1,13 @@
 .program-selection__container {
   padding: 27px 20px 32px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 30px 72px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 74px 110px 82px 110px;
+  }
 }
 
 .program-selection__title {
@@ -9,6 +17,17 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 39px;
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .program-selection__text {
@@ -17,4 +36,15 @@
   line-height: 18px;
   color: @black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }

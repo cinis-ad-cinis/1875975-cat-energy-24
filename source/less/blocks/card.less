@@ -1,5 +1,16 @@
 .card {
+  min-height: 209px;
   padding: 19px 0 25px 0;
+  // border-bottom: 1px solid @border-grey;
+
+  @media (min-width: @tablet-width) {
+    min-width: 324px;
+    min-height: 430px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 245px;
+  }
 }
 
 .card__title {
@@ -17,4 +28,10 @@
   font-size: 12px;
   line-height: 16px;
   color: @grey;
+}
+
+.card__link-button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
 }

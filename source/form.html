@@ -39,57 +39,59 @@
       <section class="program-selection">
         <div class="program-selection__container">
           <h1 class="program-selection__title">Подбор программы</h1>
-          <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <p class="program-selection__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
           <form class="program-selection__form form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__fieldset cat-info">
-              <legend class="form__title visually-hidden">Анкетные данные кота</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <label class="form__label" for="name">Имя:<sup>*</sup></label>
-                  <input class="form__input" type="text" name="name" id="name" placeholder="Барсик" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
-                  <input class="form__input" type="text" name="weight" id="weight" placeholder="7" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="age">Возраст (лет):</label>
-                  <input class="form__input" type="text" name="age" id="age" placeholder="7">
-                </li>
-              </ul>
-            </fieldset>
+            <div class="program__desktop-container">
+              <fieldset class="form__fieldset form__fieldset--cat-info">
+                <legend class="form__title visually-hidden">Анкетные данные кота</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label" for="name">Имя:<sup>*</sup></label>
+                    <input class="form__input" type="text" name="name" id="name" placeholder="Барсик" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
+                    <input class="form__input" type="text" name="weight" id="weight" placeholder="7" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="age">Возраст&nbsp;(лет):</label>
+                    <input class="form__input" type="text" name="age" id="age" placeholder="7">
+                  </li>
+                </ul>
+              </fieldset>
 
-            <fieldset class="form__fieldset program-target">
-              <legend class="form__title visually-hidden">Выбор программы питания для кота</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <label class="form__label-radio">
-                    <input class="visually-hidden form__input-radio" type="radio" name="program" value="lose-weight" checked>
-                    <span class="form__control-mark"></span>
-                    <span class="form__control-label">Похудение</span>
-                  </label>
-                </li>
-                <li class="form__item">
-                  <label class="form__label-radio">
-                    <input class="visually-hidden form__input-radio" type="radio" name="program" value="gain-weight">
-                    <span class="form__control-mark"></span>
-                    <span class="form__control-label">Набор массы</span>
-                  </label>
-                </li>
-                <li class="form__item">
-                  <label class="form__label-radio">
-                    <input class="visually-hidden form__input-radio" type="radio" name="program" value="help">
-                    <span class="form__control-mark"></span>
-                    <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="form__fieldset form__fieldset--program-target">
+                <legend class="form__title visually-hidden">Выбор программы питания для кота</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label-radio">
+                      <input class="visually-hidden form__input-radio" type="radio" name="program" value="lose-weight" checked>
+                      <span class="form__control-mark"></span>
+                      <span class="form__control-label">Похудение</span>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label-radio">
+                      <input class="visually-hidden form__input-radio" type="radio" name="program" value="gain-weight">
+                      <span class="form__control-mark"></span>
+                      <span class="form__control-label">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label-radio">
+                      <input class="visually-hidden form__input-radio" type="radio" name="program" value="help">
+                      <span class="form__control-mark"></span>
+                      <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
-            <fieldset class="form__fieldset contacts-owner">
+            <fieldset class="form__fieldset form__fieldset--contacts-owner">
               <legend class="form__title">Контактные данные (владельца кота)</legend>
-              <ul class="form__list">
+              <ul class="form__list--contacts-owner">
                 <li class="form__item">
                   <label class="form__label" for="email">E-mail:<sup>*</sup></label>
                   <input class="form__input" type="text" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -101,14 +103,14 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form__fieldset comment">
+            <fieldset class="form__fieldset form__fieldset--comment">
               <legend class="form__title">Комментарий</legend>
               <textarea class="form__textarea" name="comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
-            <fieldset class="form__fieldset additionally">
-              <legend class="form__title visually-hidden">Дополнительно</legend>
-              <ul class="form__list">
+            <fieldset class="form__fieldset form__fieldset--additionally">
+              <legend class="form__title form__title--additionally">Дополнительно</legend>
+              <ul class="form__list form__list--additionally">
                 <li class="form__item">
                   <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -140,8 +142,10 @@
               </ul>
             </fieldset>
 
-            <button class="form__button button" type="submit">Отправить заявку</button>
-            <p class="form__legend">* — Обязательные поля</p>
+            <div class="form__button-container">
+              <button class="form__button button" type="submit">Отправить заявку</button>
+              <p class="form__legend">* — Обязательные поля</p>
+            </div>
 
           </form>
 

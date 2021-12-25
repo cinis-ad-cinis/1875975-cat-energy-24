@@ -11,11 +11,11 @@
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-picture" src="img/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
-          <img class="header__logo-text" src="img/logo-type.svg" width="101" height="18" alt="Cat Energy.">
+          <img class="header__logo-picture" src="img/logo/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+          <img class="header__logo-text" src="img/logo/logo-type.svg" width="101" height="18" alt="Cat Energy.">
         </a>
 
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--closed nav--nojs">
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Показать меню.</span>
           </button>
@@ -24,7 +24,7 @@
               <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Каталог продукции</a>
+              <a class="nav__link nav__link--current" href="#">Каталог продукции</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="form.html">Подбор программы</a>
@@ -45,7 +45,7 @@
           <ul class="catalog__list">
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-chiken-small.png" width="68" height="86" alt="Банка функционального кошачьего питания со вкусом курицы 500 грамм.">
+                <img class="card__image" src="img/catalog/catalog-chiken-small.png" width="68" height="86" alt="Банка функционального кошачьего питания со вкусом курицы 500 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -70,7 +70,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-chicken-large.png" width="84" height="101" alt="Банка функционального кошачьего питания со вкусом курицы 1000 грамм.">
+                <img class="card__image" src="img/catalog/catalog-chicken-large.png" width="84" height="101" alt="Банка функционального кошачьего питания со вкусом курицы 1000 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -95,7 +95,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-fish-small.png" width="68" height="78" alt="Банка функционального кошачьего питания со вкусом рыбы 500 грамм.">
+                <img class="card__image" src="img/catalog/catalog-fish-small.png" width="68" height="78" alt="Банка функционального кошачьего питания со вкусом рыбы 500 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -120,7 +120,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-fish-large.png" width="84" height="101" alt="Банка функционального кошачьего питания со вкусом рыбы 1000 грамм.">
+                <img class="card__image" src="img/catalog/catalog-fish-large.png" width="84" height="101" alt="Банка функционального кошачьего питания со вкусом рыбы 1000 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -145,7 +145,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-buckwheat-small.png" width="68" height="78" alt="Банка функционального кошачьего питания с гречкой 500 грамм.">
+                <img class="card__image" src="img/catalog/catalog-buckwheat-small.png" width="68" height="78" alt="Банка функционального кошачьего питания с гречкой 500 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -170,7 +170,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-buckwheat-large.png" width="84" height="100" alt="Банка функционального кошачьего питания с гречкой 1000 грамм.">
+                <img class="card__image" src="img/catalog/catalog-buckwheat-large.png" width="84" height="100" alt="Банка функционального кошачьего питания с гречкой 1000 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -195,7 +195,7 @@
             </li>
             <li class="catalog__item card">
               <a class="card__link-image" href="#">
-                <img class="card__image" src="img/catalog-rice-small.png" width="72" height="84" alt="Банка функционального кошачьего питания со рисом 500 грамм.">
+                <img class="card__image" src="img/catalog/catalog-rice-small.png" width="72" height="84" alt="Банка функционального кошачьего питания со рисом 500 грамм.">
               </a>
               <div class="card__description">
                 <a class="card__link-title" href="#">
@@ -292,7 +292,7 @@
     <footer class="footer">
       <div class="footer__container">
         <a class="footer__logo" href="index.html">
-          <img class="footer__logo-text" src="img/logo-type.svg" width="128" height="24" alt="Cat Energy.">
+          <img class="footer__logo-text" src="img/logo/logo-type.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="footer__social social">
           <li class="social__item">
@@ -322,5 +322,6 @@
       </div>
     </footer>
 
+    <script src="js/navigation.js"></script>
   </body>
 </html>

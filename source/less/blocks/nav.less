@@ -1,7 +1,69 @@
 .nav__toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.nav--closed .nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .nav--closed .nav__item {
+    display: none;
+  }
+}
+
+.nav--opened .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 1px;
+    width: 25px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.nav--nojs .nav__list {
+  width: 100%;
+  position: static;
+}
+
+.nav--nojs .nav__item {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.nav--nojs .nav__toggle {
+  display: none;
 }
 
 .nav__list {
@@ -23,9 +85,21 @@
   }
 }
 
+.nav__item {
+  margin-left: -20px;
+  margin-right: -20px;
+  border-top: 1px solid @menu-stroke-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    border: none;
+  }
+}
+
 .nav__link {
+  position: relative;
   display: block;
-  padding: 23px;
+  padding: 23px 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -41,7 +115,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding: 12px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -55,6 +129,38 @@
   &--index {
     @media (min-width: @desktop-width) {
       color: @white;
+    }
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: @basic-green;
+      }
+    }
+  }
+
+  &--index-current {
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: @basic-green;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-color: @white;
+      }
     }
   }
 }

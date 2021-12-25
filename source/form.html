@@ -11,11 +11,11 @@
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-picture" src="img/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
-          <img class="header__logo-text" src="img/logo-type.svg" width="101" height="18" alt="Cat Energy.">
+          <img class="header__logo-picture" src="img/logo/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+          <img class="header__logo-text" src="img/logo/logo-type.svg" width="101" height="18" alt="Cat Energy.">
         </a>
 
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--closed nav--nojs">
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Показать меню.</span>
           </button>
@@ -27,7 +27,7 @@
               <a class="nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Подбор программы</a>
+              <a class="nav__link nav__link--current" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -170,7 +170,7 @@
     <footer class="footer">
       <div class="footer__container">
         <a class="footer__logo" href="index.html">
-          <img class="footer__logo-text" src="img/logo-type.svg" width="128" height="24" alt="Cat Energy.">
+          <img class="footer__logo-text" src="img/logo/logo-type.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="footer__social social">
           <li class="social__item">
@@ -200,5 +200,6 @@
       </div>
     </footer>
 
+    <script src="js/navigation.js"></script>
   </body>
 </html>

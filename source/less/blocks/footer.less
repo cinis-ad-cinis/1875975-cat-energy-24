@@ -3,20 +3,47 @@
 }
 
 .footer__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 39px 20px 22px 20px;
   align-items: center;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: @bg-stroke-grey;
+  }
+
+  &::after {
+    top: 158px;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 58px 30px 55px 30px;
     flex-direction: row;
     justify-content: space-between;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 58px 110px;
   }
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
 }
 
 .footer__copyright {

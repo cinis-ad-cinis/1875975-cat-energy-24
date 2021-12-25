@@ -1,8 +1,22 @@
 .extra-catalog__container {
-  padding: 25px 20px 0 20px;
+  padding: 25px 20px 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 68px 30px 76px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+    justify-content: space-between;
+    padding: 75px 110px 86px 110px;
+  }
 }
 
 .extra-catalog__title {
+  grid-column: 1;
+  grid-row: 1;
   margin: 0;
   margin-bottom: 36px;
   padding: 0;
@@ -10,9 +24,20 @@
   line-height: 24px;
   font-weight: 400;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .extra-catalog__list {
+  grid-column: ~"1 / 2";
   margin: 0;
   margin-bottom: 35px;
   padding: 0;
@@ -24,11 +49,16 @@
 }
 
 .extra-catalog__gift {
-  margin-bottom: 35px;
+  grid-column: ~"2 / 3";
   min-width: 280px;
   min-height: 290px;
   background: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-image-cat.png") no-repeat;
   background-color: @basic-green;
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+  }
 }
 
 .extra-catalog__gift-text {

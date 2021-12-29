@@ -64,21 +64,21 @@
               <fieldset class="form__fieldset form__fieldset--program-target">
                 <legend class="form__title visually-hidden">Выбор программы питания для кота</legend>
                 <ul class="form__list">
-                  <li class="form__item">
+                  <li class="form__item form__item--radio">
                     <label class="form__label-radio">
                       <input class="visually-hidden form__input-radio" type="radio" name="program" value="lose-weight" checked>
                       <span class="form__control-mark"></span>
                       <span class="form__control-label">Похудение</span>
                     </label>
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item--radio">
                     <label class="form__label-radio">
                       <input class="visually-hidden form__input-radio" type="radio" name="program" value="gain-weight">
                       <span class="form__control-mark"></span>
                       <span class="form__control-label">Набор массы</span>
                     </label>
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item--radio">
                     <label class="form__label-radio">
                       <input class="visually-hidden form__input-radio" type="radio" name="program" value="help">
                       <span class="form__control-mark"></span>
@@ -91,10 +91,10 @@
 
             <fieldset class="form__fieldset form__fieldset--contacts-owner">
               <legend class="form__title">Контактные данные (владельца кота)</legend>
-              <ul class="form__list--contacts-owner">
+              <ul class="form__list form__list--contacts-owner">
                 <li class="form__item">
                   <label class="form__label" for="email">E-mail:<sup>*</sup></label>
-                  <input class="form__input" type="text" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+                  <input class="form__input form__input--error" type="text" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
@@ -111,28 +111,28 @@
             <fieldset class="form__fieldset form__fieldset--additionally">
               <legend class="form__title form__title--additionally">Дополнительно</legend>
               <ul class="form__list form__list--additionally">
-                <li class="form__item">
+                <li class="form__item form__item--checkbox">
                   <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Cахарозаменитель</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--checkbox">
                   <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="water">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Питьевая вода</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--checkbox">
                   <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="milk">
                     <span class="form__control-mark"></span>
                     <span class="form__control-label">Молоко</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--checkbox">
                   <label class="form__label-checkbox">
                     <input class="visually-hidden form__input-checkbox" type="checkbox" name="vitamins">
                     <span class="form__control-mark"></span>

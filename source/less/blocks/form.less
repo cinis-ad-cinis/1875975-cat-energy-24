@@ -38,14 +38,36 @@
   }
 
   &--program-target {
+    position: relative;
     margin-bottom: 26px;
     padding-top: 22px;
     padding-bottom: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: @bg-stroke-grey;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
 
     @media (min-width: @tablet-width) {
       margin: 0 37px 72px 41px;
       padding: 25px 28px;
       border: 1px solid @border-grey;
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -54,42 +76,153 @@
   }
 
   &--contacts-owner {
+    position: relative;
     padding-bottom: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -69px;
+      right: -20px;
+      left: 201px;
+      height: 2px;
+      background-color: @basic-green;
+    }
 
     @media (min-width: @tablet-width) {
       padding: 0 37px 65px 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        top: -88px;
+        left: -30px;
+        height: 2px;
+        background-color: @basic-green;
+      }
+
+      &::after {
+        top: -88px;
+        right: -30px;
+        left: 593px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       padding: 0;
       padding-bottom: 69px;
+
+      &::before {
+        width: 70px;
+        left: -110px;
+      }
+
+      &::after {
+        right: -110px;
+        left: 552px;
+      }
     }
   }
 
   &--comment {
+    position: relative;
     padding-bottom: 23px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -47px;
+      right: -20px;
+      left: 143px;
+      height: 2px;
+      background-color: @basic-green;
+    }
 
     @media (min-width: @tablet-width) {
       padding: 0 37px 65px 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        top: -88px;
+        left: -30px;
+        height: 2px;
+        background-color: @basic-green;
+      }
+
+      &::after {
+        top: -88px;
+        right: -30px;
+        left: 259px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       padding: 0;
       padding-bottom: 67px;
+
+      &::before {
+        width: 70px;
+        left: -110px;
+      }
+
+      &::after {
+        right: -110px;
+        left: 222px;
+      }
     }
   }
 
   &--additionally {
+    position: relative;
     padding-bottom: 34px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -46px;
+      right: -20px;
+      left: 164px;
+      height: 2px;
+      background-color: @basic-green;
+    }
 
     @media (min-width: @tablet-width) {
       padding-bottom: 54px;
       padding-left: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        top: -69px;
+        left: -30px;
+        height: 2px;
+        background-color: @basic-green;
+      }
+
+      &::after {
+        top: -69px;
+        right: -30px;
+        left: 322px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       padding: 0;
       padding-bottom: 61px;
+
+      &::before {
+        width: 70px;
+        left: -110px;
+      }
+
+      &::after {
+        right: -110px;
+        left: 252px;
+      }
     }
   }
 }
@@ -122,11 +255,14 @@
   list-style-type: none;
 
   &--contacts-owner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 78px;
     margin: 0;
     padding: 0;
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 78px;
+    }
   }
 
   &--additionally {
@@ -154,6 +290,11 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--radio,
+  &--checkbox {
+    margin-bottom: 25px;
+  }
 }
 
 .form__label {
@@ -161,11 +302,91 @@
 }
 
 .form__label-radio {
+  position: relative;
+  padding-left: 46px;
   color: @catalog-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid @border-hover;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__input-radio + .form__control-mark {
+  border-radius: 50%;
+}
+
+.form__label-radio:hover .form__control-mark,
+.form__label-checkbox:hover .form__control-mark {
+  border-color: @control-mark-hover;
+}
+
+.form__input-radio:disabled ~ span {
+  opacity: 0.3;
+}
+
+.form__input-checkbox:disabled ~ span {
+  opacity: 0.3;
+}
+//вот так можно disabled прописать? а то я сначала городила какие-то странные
+//конструкции из соседних селекторов))
+
+.form__input-radio:checked + .form__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: @basic-green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.form__input-checkbox:checked + .form__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/icons/icon_check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icons/icon_check-large.svg");
+  }
 }
 
 .form__label-checkbox {
+  position: relative;
+  padding-left: 46px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form__input,
@@ -195,10 +416,36 @@
     height: 52px;
     padding: 10px 20px;
   }
+
+  &:hover {
+    border-color: @border-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @grey;
+  }
+
+  &--error {
+    border: 2px solid @status-error;
+  }
 }
 
 .form__textarea {
   width: 100%;
+
+  &:hover {
+    border-color: @border-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @grey;
+  }
+
+  &--error {
+    border: 2px solid @status-error;
+  }
 }
 
 .form__button-container {
@@ -217,6 +464,8 @@
 }
 
 .form__button {
+  width: 100%;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
 

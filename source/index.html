@@ -11,7 +11,11 @@
     <header class="header">
       <div class="header__container">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-picture" src="img/logo/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/desktop-logo.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/tablet-logo.svg">
+            <img class="header__logo-picture" src="img/logo/mobile-logo.svg" width="34" height="38" alt="Логотип Cat Energy.">
+          </picture>
           <img class="header__logo-text" src="img/logo/logo-type.svg" width="101" height="18" alt="Cat Energy.">
         </a>
 
@@ -42,7 +46,11 @@
         <div class="promo__container">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__text">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/promo-catfood.png" width="280" height="270" alt="Банка функционального кошачьего питания со вкусом курицы.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/promo-catfood-desktop.png 1x, img/promo-catfood-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-catfood-tablet.png 1x, img/promo-catfood-tablet@2x.png 2x">
+            <img class="promo__image" src="img/promo-catfood.png" srcset="img/promo-catfood@2x.png 2x" width="280" height="270" alt="Банка функционального кошачьего питания со вкусом курицы.">
+          </picture>
           <a class="promo__link-button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -113,10 +121,16 @@
           <div class="case__slider slider">
             <div class="slider__images">
               <div class="slider__item slider__item--before">
-                <img class="slider__image slider__image--before" src="img/mobile-beforecat.png" width="280" height="232" alt="Фото толстого котика до прохождения программы.">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/beforecat.png 1x, img/beforecat@2x.png 2x">
+                  <img class="slider__image slider__image--before" src="img/mobile-beforecat.png" srcset="img/mobile-beforecat@2x.png 2x" width="280" height="232" alt="Фото толстого котика до прохождения программы.">
+                </picture>
               </div>
               <div class="slider__item slider__item--after">
-                <img class="slider__image slider__image--after" src="img/mobile-aftercat.png" width="243" height="232" alt="Фото худого котика после прохождения программы.">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/aftercat.png 1x, img/aftercat@2x.png 2x">
+                  <img class="slider__image slider__image--after" src="img/mobile-aftercat.png" srcset="img/mobile-aftercat@2x.png 2x" width="243" height="232" alt="Фото худого котика после прохождения программы.">
+                </picture>
               </div>
             </div>
             <div class="slider__toggles">

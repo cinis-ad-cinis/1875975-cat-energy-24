@@ -27,6 +27,7 @@
     bottom: 303px;
     width: 168px;
     height: 200px;
+    align-items: flex-end;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,6 +40,23 @@
 .card__image {
   display: block;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: 172px;
+  }
+
+  &--large {
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 172px;
+      height: 196px;
+    }
+  }
 }
 
 .card__description {

@@ -5,12 +5,13 @@
   @media (min-width: @tablet-width) {
     min-height: 430px;
     position: relative;
-    padding: 161px 38px 39px 38px;
+    padding: 162px 38px 39px 38px;
     background-color: @basic-grey;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
+    padding-top: 159px;
   }
 }
 
@@ -19,6 +20,10 @@
   justify-content: center;
   align-items: center;
   width: 140px;
+
+  &--large {
+    align-items: flex-end;
+  }
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -41,18 +46,24 @@
   display: block;
   margin: auto;
 
+  @media (max-width: @mobile-width-only) {
+    &--small {
+      margin-bottom: -15px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 161px;
     height: 172px;
-  }
 
-  &--large {
-    @media (min-width: @tablet-width) {
+    &--large {
       width: 168px;
       height: 200px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
+    &--large {
       width: 172px;
       height: 196px;
     }
@@ -104,6 +115,8 @@
 
 .card__info-attribute,
 .card__info-value {
+  padding: 0;
+
   @media (min-width: @tablet-width) {
     padding: 7px 0;
     border-bottom: 1px solid @border-hover;

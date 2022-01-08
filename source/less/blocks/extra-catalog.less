@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 245px;
     gap: 80px;
     justify-content: space-between;
-    padding: 75px 110px 86px 110px;
+    padding: 52px 110px 86px 110px;
   }
 }
 
@@ -19,7 +19,7 @@
   grid-column: ~"1/-1";
   grid-row: 1;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   padding: 0;
   font-size: 24px;
   line-height: 24px;
@@ -79,7 +79,7 @@
 
 .extra-catalog__list {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   padding: 0;
   list-style-type: none;
 
@@ -111,8 +111,10 @@
   background-position: center;
   background-color: @basic-green;
 
+
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-mobile@2x.jpg");
+    background-size: 290px auto;
   }
 
   &::before {
@@ -147,6 +149,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-tablet@2x.jpg");
+      background-size: 707px auto;
     }
   }
 
@@ -156,10 +159,11 @@
     height: 289px;
     padding: 185px 43px 42px 41px;
     background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-desktop.jpg");
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-desktop@2x.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-desktop@2x.jpg");
+      background-size: 245px auto;
+    }
   }
 }
 

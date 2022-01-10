@@ -1,19 +1,41 @@
+.header {
+  &--index {
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        min-height: 694px;
+        background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)), url("../img/index-background-desktop.jpg") no-repeat;
+        background-size: cover;
+        z-index: 1;
+
+        @media (min-resolution: 2dppx) {
+          background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)), url("../img/index-background-desktop@2x.jpg") no-repeat;
+          background-size: 720px auto;
+        }
+      }
+    }
+  }
+}
+
 .header__container {
   position: relative;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
-  padding: 10px 20px 0 20px;
+  padding: 11px 20px 0 20px;
   min-height: 66px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding: 24px 30px 0 30px;
+    padding: 27px 30px 0 30px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 69px 110px 32px 132px;
+    padding: 54px 110px 0 110px;
   }
 }
 
@@ -21,7 +43,6 @@
   display: flex;
   align-items: center;
   margin-right: auto;
-  padding-bottom: 24px;
 
   &:hover {
     opacity: 0.8;
@@ -29,10 +50,6 @@
 
   &:active {
     opacity: 0.6;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 0;
   }
 }
 
@@ -58,7 +75,7 @@
     height: 19px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 118px;
     height: 21px;
   }
@@ -66,6 +83,6 @@
 
 .header__nav {
   @media (min-width: @desktop-width) {
-    z-index: 1;
+    z-index: 2;
   }
 }

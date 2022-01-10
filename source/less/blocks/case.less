@@ -2,11 +2,11 @@
   background-color: @bg-case-grey;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(to bottom, transparent 58%, @bg-case-grey 58%);
+    background: linear-gradient(to bottom, transparent 619px, @bg-case-grey 619px);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to bottom, transparent 28%, @bg-case-grey 28%);
+    background: linear-gradient(to bottom, transparent 178px, @bg-case-grey 178px);
   }
 }
 
@@ -14,14 +14,16 @@
   padding: 25px 20px 40px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 43px 30px 56px 30px;
+    padding: 43px 30px 59px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    padding: 0 110px 60px 110px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // column-gap: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px 68px 110px;
   }
 }
 
@@ -46,6 +48,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 42px;
     margin-bottom: 146px;
   }
 }
@@ -60,12 +63,13 @@
   color: @grey;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
   }
 }
 
@@ -77,11 +81,13 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: start;
+    margin-bottom: 0;
   }
 }
 
@@ -94,10 +100,6 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: @desktop-width) {
     width: 366px;
   }
 }
@@ -109,7 +111,7 @@
   align-items: center;
   min-width: 124px;
   min-height: 56px;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   padding-top: 14px;
   text-align: center;
   border: 1px solid @border-hover;
@@ -117,13 +119,16 @@
 
   @media (min-width: @tablet-width) {
     min-width: 162px;
-    min-height: 77px;
+    min-height: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
 .case__quantity {
   margin: 0;
-  margin-bottom: 7px;
   padding: 0;
   font-size: 24px;
   line-height: 24px;
@@ -155,7 +160,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 66px;
+    top: 62px;
     max-width: 160px;
     padding: 0 8px;
     font-size: 14px;
@@ -190,10 +195,11 @@
 
   @media (min-width: @desktop-width) {
     max-width: none;
+    margin: 0;
 
     span {
       margin-top: 0;
-      margin-left: 63px;
+      margin-left: 59px;
     }
   }
 }

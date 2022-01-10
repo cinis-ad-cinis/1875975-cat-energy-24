@@ -3,10 +3,21 @@
 }
 
 .page__body {
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 320px;
   height: 100%;
   font-family: @oswald;
   font-style: normal;
   font-weight: 400;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }

@@ -1,37 +1,136 @@
 .card {
   min-height: 209px;
-  padding: 19px 0 25px 0;
-  // border-bottom: 1px solid @border-grey;
+  padding: 19px 20px 25px 20px;
 
   @media (min-width: @tablet-width) {
-    min-width: 324px;
     min-height: 430px;
+    position: relative;
+    padding: 162px 38px 39px 38px;
+    background-color: @basic-grey;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 245px;
+    width: 245px;
+    padding-top: 160px;
+  }
+}
+
+.card__link-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+
+  &--large {
+    align-items: flex-end;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 303px;
+    width: 168px;
+    height: 200px;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 315px;
+    width: 172px;
+    height: 196px;
+  }
+}
+
+.card__image {
+  display: block;
+  margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    &--small {
+      margin-bottom: -15px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: 172px;
+
+    &--large {
+      width: 168px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--large {
+      width: 172px;
+      height: 196px;
+    }
+  }
+}
+
+.card__description {
+  width: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
   }
 }
 
 .card__title {
+  width: 76px;
   margin: 0;
   padding: 0;
+  margin-bottom: 14px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: @catalog-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
-.card__info-row {
+.card__info {
+  width: 100%;
+  border-collapse: collapse;
   font-family: @arial;
   font-size: 12px;
   line-height: 16px;
   color: @grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-bottom: 33px;
+  }
+}
+
+.card__info-attribute,
+.card__info-value {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 7px 0;
+    border-bottom: 1px solid @border-hover;
+  }
+}
+
+.card__info-value {
+  text-align: right;
 }
 
 .card__link-button {
+  align-self: flex-end;
   width: 100%;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
 }

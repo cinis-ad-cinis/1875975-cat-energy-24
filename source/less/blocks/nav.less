@@ -1,6 +1,6 @@
 .nav__toggle {
   position: absolute;
-  top: 20px;
+  top: 23px;
   right: 20px;
   width: 24px;
   height: 18px;
@@ -67,21 +67,30 @@
 }
 
 .nav__list {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  // min-width: 320px;
+  z-index: 2;
   margin: 0;
   padding: 0;
+  background-color: @white;
   list-style-type: none;
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    position: static;
+    max-width: 520px;
     display: flex;
-    min-width: 440px;
     justify-content: space-between;
     flex-wrap: wrap;
     align-self: flex-end;
+    background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 478px;
+    max-width: 570px;
   }
 }
 
@@ -92,6 +101,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-left: 35px;
     border: none;
   }
 }
@@ -115,7 +125,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 12px 0;
+    padding: 10px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -139,7 +149,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 3px;
         height: 2px;
         background-color: @basic-green;
       }
@@ -153,7 +163,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 3px;
         height: 2px;
         background-color: @basic-green;
       }

@@ -18,6 +18,7 @@
   position: relative;
   grid-column: ~"1/-1";
   grid-row: 1;
+  width: fit-content;
   margin: 0;
   margin-bottom: 35px;
   padding: 0;
@@ -42,37 +43,51 @@
     @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
-      top: 20px;
-      left: -30px;
-      width: 30px;
+      top: 21px;
+      right: 100%;
+      width: 100vw;
       height: 2px;
       background-color: @basic-green;
     }
 
     @media (min-width: @desktop-width) {
-      left: -110px;
-      width: 70px;
+      right: calc(100% + 40px);
     }
   }
+  // &::before {
+  //   @media (min-width: @tablet-width) {
+  //     content: "";
+  //     position: absolute;
+  //     top: 20px;
+  //     left: -30px;
+  //     width: 30px;
+  //     height: 2px;
+  //     background-color: @basic-green;
+  //   }
+
+  //   @media (min-width: @desktop-width) {
+  //     left: -110px;
+  //     width: 70px;
+  //   }
+  // }
 
   &::after {
     content: "";
     position: absolute;
     top: 14px;
-    right: -20px;
-    left: 247px;
+    left: calc(100% + 20px);
+    width: calc(100vw - 100% - 40px);
     height: 2px;
     background-color: @basic-green;
 
     @media (min-width: @tablet-width) {
-      top: 20px;
-      right: -30px;
-      left: 410px;
+      top: 21px;
+      left: calc(100% + 36px);
+      width: calc(100vw - 100% - 66px);
     }
 
     @media (min-width: @desktop-width) {
-      right: -110px;
-      left: 373px;
+      width: calc(100vw - 100% - 146px);
     }
   }
 }

@@ -274,8 +274,8 @@
         content: "";
         position: absolute;
         top: 20px;
-        left: -70px;
-        width: 30px;
+        right: calc(100% + 40px);
+        width: 100vw;
         height: 2px;
         background-color: @basic-green;
       }
@@ -290,11 +290,6 @@
     @media (min-width: @desktop-width) {
       &::after {
         width: calc(100vw - 100% - 150px);
-      }
-
-      &::before {
-        left: -110px;
-        width: 70px;
       }
     }
   }

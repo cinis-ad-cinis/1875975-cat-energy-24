@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Валентина Храмцова](https://up.htmlacademy.ru/adaptive/24/user/1875975).
-* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
+* Наставник: [Владислав Доровлев](https://htmlacademy.ru/profile/krivokora).
 
 ---
 

@@ -1,16 +1,16 @@
 .contacts {
-  position: relative;
+  // position: relative;
+  background-color: @basic-grey;
+
+  &--index {
+    background-color: @white;
+  }
 }
 
 .contacts__container {
   display: flex;
   justify-content: space-between;
   padding: 26px 20px;
-  background-color: @basic-grey;
-
-  &--index {
-    background-color: @white;
-  }
 
   @media (min-width: @tablet-width) {
     padding: 59px 70px;
@@ -22,6 +22,7 @@
     left: 110px;
     width: 565px;
     padding: 58px 80px;
+    background-color: @white;
   }
 }
 

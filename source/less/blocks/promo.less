@@ -23,12 +23,14 @@
     background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)), url("../img/index-background-cat.jpg") no-repeat;
     background-color: #504f54;
     background-position: center;
-    background-size: cover;
+    // background-size: cover;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient(rgba(@basic-green, 0.85), rgba(@basic-green, 0.85)), url("../img/index-background-cat@2x.jpg") no-repeat;
-      background-size: 320px auto;
+      background-color: #504f54;
+      background-position: center;
+      background-size: auto 302px;
     }
 
     @media (min-width: @tablet-width) {
@@ -150,7 +152,7 @@
     width: 244px;
     min-height: 54px;
     margin-left: 91px;
-    padding: 14px 26px;
+    padding: 17px 26px;
   }
 
   @media (min-width: @desktop-width) {

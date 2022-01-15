@@ -75,7 +75,7 @@
 
     @media (min-width: @desktop-width) {
       padding: 0;
-      padding-bottom: 48px;
+      padding-bottom: 68px;
     }
   }
 
@@ -244,6 +244,10 @@
   &--email,
   &--phone {
     position: relative;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -252,6 +256,16 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 14px;
+  }
+
+  &--email {
+    @media (min-width: @tablet-width) {
+      margin-right: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 20px;
+    }
   }
 }
 

@@ -1,10 +1,28 @@
 .copyright {
-  // padding: 22px 0;
+  padding: 0;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &:hover .copyright__logo {
+    fill: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .copyright__logo {
+    fill: @basic-green;
+  }
 }
 
 .copyright__text {
@@ -12,4 +30,8 @@
   font-size: 16px;
   line-height: 18px;
   color: @grey;
+}
+
+.copyright__logo {
+  fill: @grey-icons;
 }

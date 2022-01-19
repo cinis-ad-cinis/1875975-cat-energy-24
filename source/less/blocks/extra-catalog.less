@@ -1,3 +1,7 @@
+.extra-catalog {
+  overflow: hidden;
+}
+
 .extra-catalog__container {
   padding: 25px 20px 35px 20px;
 
@@ -54,22 +58,6 @@
       right: calc(100% + 40px);
     }
   }
-  // &::before {
-  //   @media (min-width: @tablet-width) {
-  //     content: "";
-  //     position: absolute;
-  //     top: 20px;
-  //     left: -30px;
-  //     width: 30px;
-  //     height: 2px;
-  //     background-color: @basic-green;
-  //   }
-
-  //   @media (min-width: @desktop-width) {
-  //     left: -110px;
-  //     width: 70px;
-  //   }
-  // }
 
   &::after {
     content: "";
@@ -171,7 +159,7 @@
   @media (min-width: @desktop-width) {
     grid-column: ~"2 / 3";
     width: 245px;
-    height: 289px;
+    min-height: 289px;
     padding: 185px 43px 42px 41px;
     background-image: linear-gradient(rgba(@basic-green, 0.85) 50%, rgba(@basic-green, 0.85) 50%), url("../img/catalog-cat-desktop.jpg");
 

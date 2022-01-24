@@ -19,7 +19,6 @@ export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(postcss([
       autoprefixer(),
       csso()

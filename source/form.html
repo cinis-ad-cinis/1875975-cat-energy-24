@@ -179,11 +179,14 @@
         <div class="contacts__map map">
           <div class="map__responsive">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/desktop-map.webp 1x, img/map/desktop-map@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map/tablet-map.webp 1x, img/map/tablet-map@2x.webp 2x">
+              <source type="image/webp" srcset="img/map/mobile-map.webp 1x, img/map/mobile-map@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/map/desktop-map.jpg 1x, img/map/desktop-map@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map/tablet-map.jpg 1x, img/map/tablet-map@2x.jpg 2x">
-              <img class="map__image map__image--hide" src="img/map/mobile-map.jpg" width="320" height="362" srcset="img/map/mobile-map@2x.jpg 2x" alt="Карта с адресом ул. Большая Конюшенная, д. 19/8.">
+              <img class="map__image" src="img/map/mobile-map.jpg" width="320" height="362" srcset="img/map/mobile-map@2x.jpg 2x" alt="Карта с адресом ул. Большая Конюшенная, д. 19/8.">
             </picture>
-            <iframe class= "map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258683!2d30.320853351452854!3d59.93871648178728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638130704841!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class= "map__iframe map__iframe--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258683!2d30.320853351452854!3d59.93871648178728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638130704841!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </section>
@@ -233,5 +236,6 @@
     </footer>
 
     <script src="js/navigation.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

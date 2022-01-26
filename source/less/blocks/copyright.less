@@ -23,6 +23,22 @@
   &:active .copyright__logo {
     fill: @basic-green;
   }
+
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
 }
 
 .copyright__text {

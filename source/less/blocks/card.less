@@ -21,6 +21,22 @@
   align-items: center;
   width: 140px;
 
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
   &--large {
     align-items: flex-end;
   }
@@ -75,6 +91,26 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+}
+
+.card__link-title {
+  display: block;
+
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
   }
 }
 

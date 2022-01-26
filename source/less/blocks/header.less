@@ -52,6 +52,22 @@
   &:active {
     opacity: 0.6;
   }
+
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
 }
 
 .header__logo-picture {

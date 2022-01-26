@@ -303,6 +303,21 @@
   border-color: @control-mark-hover;
 }
 
+.form__input-radio:focus + .form__control-mark,
+.form__input-checkbox:focus + .form__control-mark {
+  border-color: @basic-green-hover;
+}
+
+.form__input-radio:focus:not(:focus-visible) + .form__control-mark,
+.form__input-checkbox:focus:not(:focus-visible) + .form__control-mark {
+  border-color: @border-hover;
+}
+
+.form__input-radio:focus-visible + .form__control-mark,
+.form__input-checkbox:focus-visible + .form__control-mark {
+  border-color: @basic-green-hover;
+}
+
 .form__input-radio:disabled ~ span {
   opacity: 0.3;
 }

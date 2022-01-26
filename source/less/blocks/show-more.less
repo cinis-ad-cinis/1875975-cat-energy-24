@@ -24,6 +24,22 @@
   margin-bottom: 23px;
   background-color: transparent;
 
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 60px;
     height: 60px;

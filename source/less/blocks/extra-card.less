@@ -23,6 +23,26 @@
   }
 }
 
+.extra-card__link {
+  display: block;
+
+  &:focus {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: 2px solid @basic-green-hover;
+    outline-offset: 3px;
+  }
+}
+
 .extra-card__title {
   grid-column: ~"1/-1";
   margin: 0;
